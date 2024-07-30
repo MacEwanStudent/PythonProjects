@@ -1,6 +1,7 @@
 import requests
 from twilio_msg import SendMsg
 import os
+import yaml
 
 URL = "https://api.openweathermap.org/data/2.5/forecast"
 UMBRELLA = "☔"

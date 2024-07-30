@@ -1,5 +1,6 @@
 from twilio.rest import Client
 import os
+from mylib.myinfo import MyInfo
 
 
 class SendMsg:
@@ -7,13 +8,16 @@ class SendMsg:
     self.account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
     self.auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
     self.client = Client(self.account_sid, self.auth_token)
-    self.body= message
+    self.body = message
+    self.my_info = MyInfo()
+    self.from_num= self.my_info.get_info("TwilioInfo","MY_TWILIO_PHONE")
+    self.to_num = self.my_info.get_info("General", "MY_PHONE")
 
   def send_whatsapp(self):
     message = self.client.messages.create(
-      from_='whatsapp:+14155238886',
+      from_=self.from_num,
       body=self.body,
-      to='whatsapp:+15873402209'
+      to=self.to_num
     )
     print(message.sid)
 
