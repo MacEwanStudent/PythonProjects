@@ -11,9 +11,9 @@ class SendMsg:
 
   def send_whatsapp(self):
     message = self.client.messages.create(
-      from_='whatsapp:+14155238886',
+      from_='',
       body=self.body,
-      to='whatsapp:+15873402209'
+      to=''
     )
     print(message.sid)
 
