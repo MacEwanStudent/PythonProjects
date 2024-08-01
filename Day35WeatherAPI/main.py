@@ -1,13 +1,15 @@
 import requests
 from twilio_msg import SendMsg
 import os
+from mylib.myinfo import MyInfo
 import yaml
 
 URL = "https://api.openweathermap.org/data/2.5/forecast"
 UMBRELLA = "☔"
 
 # Using Environment Variable for security purposes
-MY_API = os.environ.get("OWN_API_KEY")
+my_info = MyInfo()
+MY_API = my_info.get_info("OpenWeatherKey","OWN_API_KEY")
 my_msg = SendMsg()
 
 open_weather = {
