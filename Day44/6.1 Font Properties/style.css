@@ -1,0 +1,23 @@
+html{
+    font-size: xx-large;
+}
+
+#coral{
+    color:coral
+}
+h1{
+    font-family: 'caveat';
+}
+#FONTSIZE{
+    font-size: 2rem;
+    font-family: 'caveat';
+}
+#FW{
+    font-weight: 900;
+}
+#Family {
+    font-family: 'caveat', cursive;
+}
+#CEN{
+    text-align: right;
+}
