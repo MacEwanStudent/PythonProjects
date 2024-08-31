@@ -1,0 +1,31 @@
+div{
+    height: 200px;
+    width: 200px;
+    
+}
+p {
+    margin: 0;
+    
+  }
+#D1{
+    background-color: cadetblue;
+    padding: 20px;
+    border: 10px solid black;
+    box-sizing: content-box;
+    text-align: justify;
+}
+    
+#D2{
+    background-color: gold;
+    border-color: black;
+    border-top: 20px solid;
+    border-bottom: 20px solid;
+    border-left: 10px solid;
+    border-right: 10px solid;
+    margin-left: 260px;
+}
+#D3{
+    background-color: indianred;
+    border: 10px solid;
+    margin-left: 40px;
+}
