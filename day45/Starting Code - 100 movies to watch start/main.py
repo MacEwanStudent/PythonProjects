@@ -25,5 +25,9 @@ my_list.sort(key=lambda x: x[0], reverse=True)
 for movie in my_list:
     print(movie)
 
+with open("movies.txt", mode="w", encoding='utf-8') as file:
+    for movie in my_list:
+        file.write(f"{movie[0]}) {movie[1]}\n")
+
 
 
